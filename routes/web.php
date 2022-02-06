@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\registerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
-    return view('login.index');
-});
+// Route::get('/login', function () {
+//     return view('login.index');
+// });
+
+Route::get('/login', [loginController::class,'index']);
+Route::post('/login', [loginController::class,'authenticate']);
+
+Route::get('/register', [registerController::class,'index']);
+Route::post('/register', [registerController::class,'store']);
+
+Route::post('/logout', [LoginController::class,'logout']);
 
 Route::get('/register', function () {
     return view('register.index');
@@ -60,6 +70,6 @@ Route::get('/dashboard/result', function () {
 Route::get('/profile', function () {
     return view('/profile.show');
 });
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('/home');
 });

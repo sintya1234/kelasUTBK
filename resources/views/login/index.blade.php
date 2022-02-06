@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-4">
 
-            {{-- @if (session()->has('success'))
+            @if (session()->has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     {{ session('success') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -16,7 +16,7 @@
                     {{ session('loginError') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-            @endif --}}
+            @endif 
 
             <main class="form-signin">
 
