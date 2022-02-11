@@ -54,17 +54,17 @@
                                     <h6 class="mb-0">Name: Farren </h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{-- {{ auth()->user()->name }} --}}
+                                    {{ auth()->user()->name }} 
                                 </div>
                             </div>
                             <hr>
                             <hr>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Email: Farren@gmail.com</h6>
+                                    <h6 class="mb-0">Email:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{-- {{ auth()->user()->email }} --}}
+                                 {{ auth()->user()->email }}
                                 </div>
                             </div>
                             <hr>

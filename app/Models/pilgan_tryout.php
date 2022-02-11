@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class pilgan_tryout extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
     public function soal_tryout()
     {

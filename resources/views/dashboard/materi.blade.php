@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('container')
-<button type="button" class="btn btn-primary">Saintek</button>
-<button type="button" class="btn btn-secondary">Soshum</button>
-<button type="button" class="btn btn-secondary">TPS</button>
-<button type="button" class="btn btn-secondary">TPA</button>
+
+@foreach ($materis as $materi)
+<li><a href="/dashboard/materi/{{ $materi->id }}"><button type="button" class="btn btn-outline-secondary">{{ $materi->nama_materi }}</button></a></li><br>
+@endforeach
 @endsection
+

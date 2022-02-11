@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class soal_tryout extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
     public function user_result()
     {

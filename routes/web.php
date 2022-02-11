@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\materiController;
 use App\Http\Controllers\registerController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', [loginController::class,'index']);
 Route::post('/login', [loginController::class,'authenticate']);
 
-Route::get('/register', [registerController::class,'index']);
-Route::post('/register', [registerController::class,'store']);
+Route::get('/register', [registerController::class, 'index']);
+Route::post('/register', [registerController::class, 'storeWeb']);
 
 Route::post('/logout', [LoginController::class,'logout']);
 
@@ -47,17 +48,22 @@ Route::get('/dashboard/banksoal', function () {
     return view('/dashboard/bank_soal');
 });
 
-Route::get('/dashboard/materi', function () {
-    return view('/dashboard/materi');
-});
+// Route::get('/dashboard/materi', function () {
+//     return view('/dashboard/materi');
+// });
 
-Route::get('/dashboard/materi/{materi}', function () {
-    return view('/dashboard/sub_materi');
-});
+Route::get('/dashboard/materi', [ materiController::class, 'index']);
 
-Route::get('/dashboard/materi/{materi}/{bab_materi}', function () {
-    return view('/dashboard/bab_materi');
-});
+// Route::get('/dashboard/materi/{materi}', function () {
+//     return view('/dashboard/sub_materi');
+// });
+Route::get('/dashboard/materi/{materi}', [materiController::class,'show']);
+
+Route::get('/dashboard/materi/{materi}/{bab_materi}', [materiController::class,'show_bab_materi']);
+
+// Route::get('/dashboard/materi/{materi}/{bab_materi}', function () {
+//     return view('/dashboard/bab_materi');
+// });
 
 Route::get('/dashboard/kalender', function () {
     return view('/dashboard/kalender');
