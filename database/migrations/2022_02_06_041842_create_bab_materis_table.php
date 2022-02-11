@@ -17,7 +17,8 @@ class CreateBabMaterisTable extends Migration
             $table->id();
 
             $table->string('judul_bab');
-            $table->string('file_materi');
+            $table->string('slug')->unique();
+            $table->string('file_materi')->nullable();
             $table->foreignId('sub_materi_id');
 
             $table->timestamps();

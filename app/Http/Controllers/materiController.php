@@ -24,7 +24,7 @@ class materiController extends Controller
     return view('/dashboard/sub_materi',compact('materi') );
   }
 
-  
+
   public function show_bab_materi(materi $materi)
   {
     return view('/dashboard/bab_materi',compact('materi') );

@@ -16,6 +16,7 @@ class CreateSubMaterisTable extends Migration
         Schema::create('sub_materis', function (Blueprint $table) {
             $table->id();
             $table->string('nama_sub_materi');
+            $table->string('slug')->unique();
             $table->foreignId('materi_id');
             $table->timestamps();
         });
