@@ -20,7 +20,6 @@ class materiController extends Controller
 
   public function show(materi $materi)
   {
- //dd($materi->sub_materis);
     return view('/dashboard/sub_materi',compact('materi') );
   }
 

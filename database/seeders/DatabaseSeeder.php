@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\bab_materi;
 use App\Models\materi;
 use App\Models\sub_materi;
 use App\Models\User;
@@ -93,6 +94,9 @@ class DatabaseSeeder extends Seeder
             'materi_id' => '2',
         ]);
 
+        
+    
      User::factory(10)->create();
+     bab_materi::factory(20)->create();
     }
 }
