@@ -19,4 +19,9 @@ class sub_materi extends Model
     {
         return $this->hasMany(bab_materi::class,'sub_materi_id','id');
     }
+
+    public function babMateris()
+    {
+        return $this->hasMany(bab_materi::class,'sub_materi_id','id');
+    }
 }

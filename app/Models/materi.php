@@ -20,6 +20,11 @@ class materi extends Model
         return $this->hasMany(sub_materi::class, 'materi_id','id');
     }
 
+    public function subMateris()
+    {
+        return $this->hasMany(sub_materi::class, 'materi_id','id');
+    }
+
     public function tryouts()
     {
         return $this->hasMany(tryout::class, 'materi_id','id');
