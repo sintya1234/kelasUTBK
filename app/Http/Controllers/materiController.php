@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\materi;
-
+use App\Models\sub_materi;
 use Illuminate\Http\Request;
 
 class materiController extends Controller
@@ -24,8 +24,11 @@ class materiController extends Controller
   }
 
 
-  public function show_bab_materi(materi $materi)
+  public function show_bab_materi(materi $materi, sub_materi $sub_materi)
   {
-    return view('/dashboard/bab_materi',compact('materi') );
+    
+dd($sub_materi);
+   
+    return view('/dashboard/bab_materi',compact('materi','sub_materi') );
   }
 }

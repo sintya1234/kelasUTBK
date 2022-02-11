@@ -15,7 +15,6 @@ class CreateBabMaterisTable extends Migration
     {
         Schema::create('bab_materis', function (Blueprint $table) {
             $table->id();
-
             $table->string('judul_bab');
             $table->string('slug')->unique();
             $table->string('file_materi')->nullable();
