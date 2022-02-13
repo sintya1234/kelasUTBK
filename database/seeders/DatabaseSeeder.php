@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\bab_materi;
 use App\Models\materi;
 use App\Models\sub_materi;
+use App\Models\tryout;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -98,5 +99,6 @@ class DatabaseSeeder extends Seeder
     
      User::factory(10)->create();
      bab_materi::factory(20)->create();
+     tryout::factory(20)->create();
     }
 }
