@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\bab_materi;
 use App\Models\materi;
 use App\Models\sub_materi;
+use App\Models\tryout;
 use App\Models\User;
 use App\Models\vidio_materi;
 use Illuminate\Database\Seeder;
@@ -99,6 +100,10 @@ class DatabaseSeeder extends Seeder
     
      User::factory(10)->create();
      bab_materi::factory(20)->create();
+<<<<<<< HEAD
      vidio_materi::factory(10)->create();
+=======
+     tryout::factory(20)->create();
+>>>>>>> d5a717251667fe222666e80c047773c2d12848d0
     }
 }

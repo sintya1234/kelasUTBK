@@ -3,6 +3,7 @@
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\materiController;
 use App\Http\Controllers\registerController;
+use App\Http\Controllers\tryoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,9 +37,9 @@ Route::get('/dashboard', function () {
     return view('dashboard/utama');
 });
 
-Route::get('/dashboard/tryout', function () {
-    return view('/dashboard/bank_soal');
-});
+Route::get('/dashboard/tryout', [tryoutController::class, 'index']);
+
+Route::get('/dashboard/tryout/{materi:slug}', [tryoutController::class, 'pilihNomorTryout']);
 
 Route::get('/dashboard/banksoal', function () {
     return view('/dashboard/bank_soal');
