@@ -61,11 +61,13 @@ Route::get('/dashboard/materi/{materi:slug}', [materiController::class,'show']);
 
 Route::get('/dashboard/materi/{materi:slug}/{sub_materi:slug}', [materiController::class,'show_bab_materi']);
 
-Route::get('/dashboard/materi/{materi:slug}/{sub_materi:slug}/{bab_materi:slug}', [materiController::class,'bab_materi']);
+// Route::get('/dashboard/materi/{materi:slug}/{sub_materi:slug}/{bab_materi:slug}', [materiController::class,'bab_materi']);
 
-// Route::get('/dashboard/materi/{materi}/{bab_materi}', function () {
-//     return view('/dashboard/bab_materi');
-// });
+route::get('/baca/{bab_materi:slug}', [materiController::class, 'baca_bab_materi']);
+
+route::get('download/{file_materi}', [materiController::class, 'download_file_materi']);
+
+// /dashboard/materi/{{ $materi->slug }}/{{ $sub_materi->slug }}/{{ $bab_materi->slug }} 
 
 Route::get('/dashboard/kalender', function () {
     return view('/dashboard/kalender');
@@ -80,4 +82,7 @@ Route::get('/profile', function () {
 });
 Route::get('/', function () {
     return view('/home');
+});
+Route::get('/vidio', function () {
+    return view('/dashboard/vidio');
 });

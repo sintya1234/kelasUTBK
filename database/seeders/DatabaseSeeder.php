@@ -6,6 +6,7 @@ use App\Models\bab_materi;
 use App\Models\materi;
 use App\Models\sub_materi;
 use App\Models\User;
+use App\Models\vidio_materi;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -98,5 +99,6 @@ class DatabaseSeeder extends Seeder
     
      User::factory(10)->create();
      bab_materi::factory(20)->create();
+     vidio_materi::factory(10)->create();
     }
 }

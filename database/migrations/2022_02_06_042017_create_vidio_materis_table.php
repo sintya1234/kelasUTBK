@@ -15,6 +15,7 @@ class CreateVidioMaterisTable extends Migration
     {
         Schema::create('vidio_materis', function (Blueprint $table) {
             $table->id();
+            $table->string('judul_vidio_materi');
             $table->string('file_vidio_materi');
             $table->foreignId('bab_materi_id');
             $table->timestamps();
