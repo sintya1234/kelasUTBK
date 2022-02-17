@@ -41,13 +41,13 @@ Route::get('/dashboard/tryout', [tryoutController::class, 'index']);
 
 Route::get('/dashboard/tryout/{materi:slug}', [tryoutController::class, 'pilihNomorTryout']);
 
-Route::get('/dashboard/banksoal', function () {
-    return view('/dashboard/bank_soal');
-});
+// Route::get('/dashboard/banksoal', function () {
+//     return view('/dashboard/bank_soal');
+// });
 
-Route::get('/dashboard/banksoal', function () {
-    return view('/dashboard/bank_soal');
-});
+// Route::get('/dashboard/banksoal', function () {
+//     return view('/dashboard/bank_soal');
+// });
 
 // Route::get('/dashboard/materi', function () {
 //     return view('/dashboard/materi');
@@ -69,6 +69,8 @@ Route::get('/dashboard/materi/{materi:slug}/{sub_materi:slug}/{bab_materi:slug}/
 route::get('/baca/{bab_materi:slug}', [materiController::class, 'baca_bab_materi']);
 
 route::get('download/{file_materi}', [materiController::class, 'download_file_materi']);
+
+route::get('/dashboard/bank_soal/', [materiController::class, 'index_bank_soal']);
 
 // /dashboard/materi/{{ $materi->slug }}/{{ $sub_materi->slug }}/{{ $bab_materi->slug }} 
 

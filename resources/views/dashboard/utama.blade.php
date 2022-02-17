@@ -7,7 +7,7 @@
     </div>
 
     <div>
-        <a href="/dashboard/banksoal" class="btn btn-secondary">Bank Soal</a>
+        <a href="/dashboard/bank_soal" class="btn btn-secondary">Bank Soal</a>
     </div>
 
     <div>

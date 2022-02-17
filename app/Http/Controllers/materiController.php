@@ -43,6 +43,15 @@ class materiController extends Controller
   {
     return view('/dashboard/vidio',compact('materi','sub_materi','bab_materi') );
   }
+  
+  public function index_bank_soal()
+  { 
+    $materis=materi::where('id', 1)
+     ->orWhere('id', 2)->get();;
+    
+    return view('/dashboard/bank_soal',compact('materis') );
+  }
+
 }
 
 
