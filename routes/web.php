@@ -62,6 +62,8 @@ Route::get('/dashboard/materi/{materi:slug}', [materiController::class,'show']);
 
 Route::get('/dashboard/materi/{materi:slug}/{sub_materi:slug}', [materiController::class,'show_bab_materi']);
 
+Route::get('/dashboard/materi/{materi:slug}/{sub_materi:slug}/{bab_materi:slug}/video', [materiController::class,'show_vidio']);
+
 // Route::get('/dashboard/materi/{materi:slug}/{sub_materi:slug}/{bab_materi:slug}', [materiController::class,'bab_materi']);
 
 route::get('/baca/{bab_materi:slug}', [materiController::class, 'baca_bab_materi']);

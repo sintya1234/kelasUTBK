@@ -16,6 +16,7 @@ class CreateBankSoalsTable extends Migration
         Schema::create('bank_soals', function (Blueprint $table) {
             $table->id();
             $table->string('judul_bank_soal');
+            $table->string('slug')->unique();
             $table->string('file_bank_soal');
             $table->foreignId('materi_id');
             $table->timestamps();

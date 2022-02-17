@@ -3,11 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\bab_materi;
+use App\Models\bank_soal;
 use App\Models\materi;
 use App\Models\sub_materi;
 use App\Models\tryout;
 use App\Models\User;
 use App\Models\vidio_materi;
+use Database\Factories\TryoutFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +24,7 @@ class DatabaseSeeder extends Seeder
         materi::create([
             'nama_materi' => 'SAINTEK',
             'slug' => 'saintek',
-            
+
         ]);
 
         materi::create([
@@ -96,14 +98,38 @@ class DatabaseSeeder extends Seeder
             'materi_id' => '2',
         ]);
 
-        
-    
-     User::factory(10)->create();
-     bab_materi::factory(20)->create();
-<<<<<<< HEAD
-     vidio_materi::factory(10)->create();
-=======
-     tryout::factory(20)->create();
->>>>>>> d5a717251667fe222666e80c047773c2d12848d0
+
+        //ini vidio
+
+        vidio_materi::create([
+            'judul_vidio_materi' => 'pembelajaran vidio spongebob',
+            'file_vidio_materi' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/DTtvqQRYWf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            'bab_materi_id' => '1',
+        ]);
+
+        vidio_materi::create([
+            'judul_vidio_materi' => 'pembelajaran dora',
+            'file_vidio_materi' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/jzEdPx3CyAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            'bab_materi_id' => '1',
+        ]);
+
+        vidio_materi::create([
+            'judul_vidio_materi' => 'pembelajaran lala lili',
+            'file_vidio_materi' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/MYLxENuMk5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+
+            'bab_materi_id' => '1',
+        ]);
+
+        vidio_materi::create([
+            'judul_vidio_materi' => 'pembelajaran lulu',
+            'file_vidio_materi' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/bUxd3jqCr94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            'bab_materi_id' => '1',
+        ]);
+
+        bank_soal::factory(20)->create();
+        User::factory(10)->create();
+        bab_materi::factory(20)->create();
+        vidio_materi::factory(10)->create();
+        tryout::factory(9)->create();
     }
 }

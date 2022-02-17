@@ -32,7 +32,8 @@
                             <a href="{{ url('download', $bab_materi->file_materi) }}">download</a>
                         </td>
                         <td>
-                            <a href="">nonton vidio</a>
+                            <a href="/dashboard/materi/{{ $materi->slug }}/{{ $sub_materi->slug }}/{{ $bab_materi->slug }}/video">nonton vidio</a>
+                           
                         </td>
                     </tr>
                 @endforeach

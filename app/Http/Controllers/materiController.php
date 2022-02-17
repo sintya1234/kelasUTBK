@@ -38,4 +38,12 @@ class materiController extends Controller
   {
    return response()->download(public_path('storage/folder_PDF/'.$file_materi));
   }
+
+  public function show_vidio(materi $materi,sub_materi $sub_materi, bab_materi $bab_materi)
+  {
+    return view('/dashboard/vidio',compact('materi','sub_materi','bab_materi') );
+  }
 }
+
+
+
