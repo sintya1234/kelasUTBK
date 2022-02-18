@@ -72,7 +72,13 @@ route::get('download/{file_materi}', [materiController::class, 'download_file_ma
 
 route::get('/dashboard/bank_soal/', [materiController::class, 'index_bank_soal']);
 
-// /dashboard/materi/{{ $materi->slug }}/{{ $sub_materi->slug }}/{{ $bab_materi->slug }} 
+// /dashboard/bank_soal/{{ $materi->slug }}/{{ $bank_soal->slug }}/baca
+
+// /dashboard/bank_soal/{{ $materi->slug }}
+
+route::get('/dashboard/bank_soal/{materi:slug}', [materiController::class, 'index_bank_soal_list']);
+
+route::get('/dashboard/bank_soal/{materi:slug}/{bank_soal:slug}/baca', [materiController::class, 'index_bank_soal_baca']);
 
 Route::get('/dashboard/kalender', function () {
     return view('/dashboard/kalender');

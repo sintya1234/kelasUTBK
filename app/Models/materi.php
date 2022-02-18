@@ -10,9 +10,9 @@ class materi extends Model
     use HasFactory;
     protected $guarded = ['id'];
     
-    public function bank_soals()
+    public function bankSoals()
     {
-        return $this->hasMany(bank_soal::class,'bab_materi_id','id');
+        return $this->hasMany(bank_soal::class,'materi_id','id');
     }
 
     public function sub_materis()
