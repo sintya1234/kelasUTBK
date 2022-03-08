@@ -19,4 +19,9 @@ class tryout extends Model
     {
         return $this->belongsTo(materi::class,'materi_id','id');
     }
+
+    public function penghubung_users_tryouts()
+    {
+        return $this->belongsToMany(materi::class,'tryouts_id','id');
+    }
 }

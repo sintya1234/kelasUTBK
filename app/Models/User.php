@@ -42,8 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function user_results()
+    public function penghubung_user_tryouts()
     {
-        return $this->hasMany(user_result::class, 'user_id', 'id');
+        return $this->hasMany(penghubung_user_tryouts::class, 'user_id', 'id');
     }
 }

@@ -9,14 +9,13 @@
                     {{ session('success') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-
             @endif
             @if (session()->has('loginError'))
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     {{ session('loginError') }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-            @endif 
+            @endif
 
             <main class="form-signin">
 
@@ -41,12 +40,17 @@
                     </div>
 
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-block btn-sm btn-twitter">
+                            <i class="fa fa-google mr-2"></i>
+                            Signin with Google
+                        </button>
+                    </div>
+
 
                 </form>
                 <small class="d-block text-center mt-3">Belum daftar? <a href="/register">Register Now!</a></small>
             </main>
         </div>
     </div>
-
-
 @endsection

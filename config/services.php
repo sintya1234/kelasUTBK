@@ -14,6 +14,12 @@ return [
     |
     */
 
+    'google' => [
+        'client_id' => 'xxxx',
+        'client_secret' => 'xxx',
+        'redirect' => 'http://127.0.0.1:8000/callback/google',
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
