@@ -1,0 +1,11 @@
+.rounded-bottom-left {
+    border-bottom-left-radius: 40px !important;
+}
+
+.rounded-bottom-right {
+    border-bottom-right-radius: 40px !important;
+}
+
+.nav {
+    color: black !important;
+}

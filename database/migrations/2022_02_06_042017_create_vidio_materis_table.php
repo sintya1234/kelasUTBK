@@ -20,6 +20,14 @@ class CreateVidioMaterisTable extends Migration
             $table->foreignId('bab_materi_id');
             $table->timestamps();
         });
+
+        Schema::table('vidio_materis', function (Blueprint $table) {
+            //
+            $table->foreign('bab_materi_id')
+            ->references('id')->on('bab_materis')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**

@@ -22,6 +22,19 @@ class CreateSoalResultsTable extends Migration
             $table->integer('jawaban_salah');
             $table->integer('jawaban_kosong');
         });
+
+        Schema::table('soal_results', function (Blueprint $table) {
+            //
+            $table->foreign('id_penghubung_ut')
+            ->references('id')->on('penghubung_users_tryouts')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+            $table->foreign('soal_tryout_id')
+            ->references('id')->on('soal_tryouts')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**

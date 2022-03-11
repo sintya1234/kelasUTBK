@@ -21,6 +21,14 @@ class CreateBankSoalsTable extends Migration
             $table->foreignId('materi_id');
             $table->timestamps();
         });
+
+        Schema::table('bank_soals', function (Blueprint $table) {
+            //
+            $table->foreign('materi_id')
+            ->references('id')->on('materis')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**

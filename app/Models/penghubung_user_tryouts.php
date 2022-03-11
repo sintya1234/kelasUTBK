@@ -9,6 +9,10 @@ class penghubung_user_tryouts extends Model
 {
     use HasFactory;
 
+    protected $table = "penghubung_users_tryouts";
+    protected $guarded = ['id'];
+    protected $fillable = ['users_id', 'tryouts_id', 'status_pengerjaan', 'nilai'];
+
     public function user()
     {
         return $this->hasOne(user::class,'tryouts_id','id');

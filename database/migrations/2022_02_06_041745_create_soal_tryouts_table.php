@@ -19,6 +19,14 @@ class CreateSoalTryoutsTable extends Migration
             $table->foreignId('tryout_id');
             $table->timestamps();
         });
+
+        Schema::table('soal_tryouts', function (Blueprint $table) {
+            //
+            $table->foreign('tryout_id')
+            ->references('id')->on('tryouts')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**

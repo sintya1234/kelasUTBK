@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class soal_tryout extends Model
 {
     use HasFactory;
+
+    protected $table = "soal_tryouts";
     protected $guarded = ['id'];
+    protected $fillable = ['pertanyaan_soal', 'tryout_id'];
 
     public function user_result()
     {

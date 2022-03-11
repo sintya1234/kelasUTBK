@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class sub_materi extends Model
 {
     use HasFactory;
+
+    protected $table = "sub_materis";
     protected $guarded = ['id'];
+    protected $fillable = ['nama_sub_materi', 'slug', 'materi_id'];
 
     public function materi()
     {
