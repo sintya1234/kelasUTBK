@@ -1,51 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
-    <div class="container">
-        <a class="navbar-brand" href="/">Kelas UTBK</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="/profile">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('dashboard.result') ? 'active' : '' }}" href="dashboard/result">Result</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">Dashboard</a>
-                </li>
+<nav class="nav navbar-expand-sm">
+    <div class="bg-warning w-25 rounded-bottom-right pt-3 px-2 pb-2">
+      <a href="/" class="navbar-brand d-flex mx-2">
+        <img src="/image/logo.png" width="30" height="30" class="mx-1">
+        Online Class
+      </a>
+    </div>
+    <div class="w-25">
+        
+    </div>
+    <div class="bg-warning w-50 rounded-bottom-left py-2">
+        <div class="collapse navbar-collapse float-end" id="collapsibleNavbar">
+            <ul class="navbar-nav mx-4">
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="#">Tryout</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
             </ul>
-            <ul class="navbar- nav ms-auto">
-                @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ auth()->user()->name }}
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <form action="/logout" method="post">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
-                                </form>
-                            </li>
-
-                        </ul>
-                    </li>
-                @else
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="/login" class="nav-link {{ Request::is('/login') ? 'active' : '' }}"><i
-                                    class="bi bi-box-arrow-in-right"></i>Login</a>
-                        </li>
-                    </ul>
-                @endauth
-            </ul>
-        </div>
+          </div>
     </div>
 </nav>

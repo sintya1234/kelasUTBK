@@ -20,6 +20,14 @@ class CreatePilganTryoutsTable extends Migration
             $table->foreignId('soal_tryout_id');
             $table->timestamps();
         });
+
+        Schema::table('pilgan_tryouts', function (Blueprint $table) {
+            //
+            $table->foreign('soal_tryout_id')
+            ->references('id')->on('soal_tryouts')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**

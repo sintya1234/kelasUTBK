@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class materi extends Model
 {
     use HasFactory;
+
+    protected $table = "materis";
     protected $guarded = ['id'];
+    protected $fillable = ['nama_materi', 'slug'];
     
     public function bankSoals()
     {

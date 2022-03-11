@@ -22,6 +22,14 @@ class CreateBabMaterisTable extends Migration
 
             $table->timestamps();
         });
+
+        Schema::table('bab_materis', function (Blueprint $table) {
+            //
+            $table->foreign('sub_materi_id')
+            ->references('id')->on('sub_materis')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**

@@ -20,6 +20,14 @@ class CreateSubMaterisTable extends Migration
             $table->foreignId('materi_id');
             $table->timestamps();
         });
+
+        Schema::table('sub_materis', function (Blueprint $table) {
+            //
+            $table->foreign('materi_id')
+            ->references('id')->on('materis')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**

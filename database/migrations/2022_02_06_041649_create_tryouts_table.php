@@ -19,6 +19,14 @@ class CreateTryoutsTable extends Migration
             $table->foreignId('materi_id');
             $table->timestamps();
         });
+
+        Schema::table('tryouts', function (Blueprint $table) {
+            //
+            $table->foreign('materi_id')
+            ->references('id')->on('materis')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+        });
     }
 
     /**
