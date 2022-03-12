@@ -1,19 +1,34 @@
+body{
+    font-family: 'Thasadith', sans-serif;
+}
+/* NAVBAR */
+.bg-navbar{
+    background-color: #FFBB46;
+}
+.nav-clr{
+    color: #000000 !important;
+    font-size: larger;
+    font-weight: 20;
+}
+.nav-clr:hover{
+    font-weight: bold;
+    font-size: larger;
+}
 .rounded-bottom-left {
-    border-bottom-left-radius: 40px !important;
+    border-bottom-left-radius: 60px !important;
 }
-
 .rounded-bottom-right {
-    border-bottom-right-radius: 40px !important;
+    border-bottom-right-radius: 60px !important;
 }
-
 .nav {
     color: black !important;
 }
 
 .auth-bg-size {
-    height: 100vh !important;
+    heighxt: 100vh !important;
 }
 
 .rounded-corners {
     border-radius: 30px;
 }
+/* FOOTER */

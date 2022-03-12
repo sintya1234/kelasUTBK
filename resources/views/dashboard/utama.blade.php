@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('container')
-    <H1>Hallo, {{ auth()->user()->name }}</H1>
+    <H1>Halo, {{ auth()->user()->name }}</H1>
 
     <div>
         <a href="/dashboard/materi" class="btn btn-primary">Materi</a>
