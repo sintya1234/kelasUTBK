@@ -9,13 +9,19 @@
         
     </div>
     <div class="bg-warning w-50 rounded-bottom-left py-2">
-        <div class="collapse navbar-collapse float-end" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="collapsibleNavbar">
             <ul class="navbar-nav mx-4">
               <li class="nav-item mx-1">
                 <a class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item mx-1">
                 <a class="nav-link" href="#">Tryout</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="#">About Us</a>
               </li>
               <li class="nav-item mx-1">
                 <a class="nav-link" href="#">About Us</a>

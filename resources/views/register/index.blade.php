@@ -1,55 +1,57 @@
-@extends('layouts.main')
+@extends('layouts.auth')
 
-@section('container')
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <main class="form-signin">
+@section('content')
+    <div>
+        <h2 class="text-center">Daftarkan Dirimu</h2>
+        <form action="/register" method="POST" class="mt-4">
+            @csrf
+            
 
-                <form action="/register" method="POST">
-                    @csrf
-                    <h1 class="h3 mb-3 fw-normal">Silahkan, Registrasi!!</h1>
-
-                    <div class="form-floating">
-                        <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror"
-                            id="name" placeholder="Name" required value="{{ old('name') }}">
-                        <label for="name">Name</label>
-                        @error('name')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+            <div class="form-floating">
+                <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror"
+                    id="name" placeholder="Name" required value="{{ old('name') }}">
+                <label for="name">Name</label>
+                @error('name')
+                    <div class="invalid-feedback">
+                        {{ $message }}
                     </div>
+                @enderror
+            </div>
 
+            <br>
 
-                    <div class="form-floating">
-                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                            id="email" placeholder="name@example.com" required value="{{ old('email') }}">
-                        <label for="email">Email address</label>
-                        @error('email')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+            <div class="form-floating">
+                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
+                    id="email" placeholder="name@example.com" required value="{{ old('email') }}">
+                <label for="email">Email address</label>
+                @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
                     </div>
+                @enderror
+            </div>
 
-                    <div class="form-floating">
-                        <input type="password" name="password"
-                            class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password"
-                            placeholder="Password" required value="{{ old('password') }}">
-                        <label for="password">Password</label>
-                        @error('password')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+            <br>
+
+            <div class="form-floating">
+                <input type="password" name="password"
+                    class="form-control rounded-bottom @error('password') is-invalid @enderror" id="password"
+                    placeholder="Password" required value="{{ old('password') }}">
+                <label for="password">Password</label>
+                @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
                     </div>
+                @enderror
+            </div>
+            
+            <br>
+            <br>
 
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+            <button class="w-100 btn btn-outline-dark" type="submit">Register</button>
 
-                </form>
-                <small class="d-block text-center mt-3">sudah pernah daftar? <a href="/login">Login Now!</a></small>
-            </main>
-        </div>
+        </form>
+        <small class="d-block text-center mt-3">sudah pernah daftar? <a href="/login">Login Now!</a></small>
     </div>
 
 
