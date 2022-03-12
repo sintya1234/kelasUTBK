@@ -25,10 +25,14 @@ body{
 }
 
 .auth-bg-size {
-    heighxt: 100vh !important;
+    height: 100vh !important;
 }
 
 .rounded-corners {
     border-radius: 30px;
+}
+
+.prof-img{
+    border-radius: 50%;
 }
 /* FOOTER */
