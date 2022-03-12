@@ -9,3 +9,11 @@
 .nav {
     color: black !important;
 }
+
+.auth-bg-size {
+    height: 100vh !important;
+}
+
+.rounded-corners {
+    border-radius: 30px;
+}

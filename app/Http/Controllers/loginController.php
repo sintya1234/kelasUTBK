@@ -15,41 +15,30 @@ class loginController extends Controller
             'title' => 'login'
         ]);
     }
+
     public function authenticate(Request $request)
     {
         $user = [
             'email' => $request->email,
             'password' => $request->password,
-            'status_login' => 0,
-     
         ];
 
+        $credentials = $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required|min:8'
+        ]);
+        
         $check = DB::table('users')->where('email', $request->email)->first();
 
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
-
         if (Auth::attempt($credentials)) {
-           
-                if ($check->status_login == 0) {
-                    if (Auth::attempt($user)) {
-                        $this->isLogin(Auth::id());
-
-                        $request->session()->regenerate();
-                        return redirect()->intended('/');
-  
-                    } else {
-                        return back()->with('loginError', 'Login failed');
-                    }
-                } else {
-                    $request->session()->regenerate();
-                    return redirect()->intended('/');
-                }
-            
+           $request->session()->regenerate();
+           return redirect()->intended('/');
         } else {
-            return back()->with('loginError', 'Login failed');
+            if($check != null){
+                return back()->with('loginError', 'Login Gagal');
+            }else{
+                return back()->with('loginError', 'Username atau Password salah');
+            }
         }
     }
 
