@@ -11,19 +11,19 @@
     <div class="bg-navbar w-75 rounded-bottom-left py-2">
         <div class="collapse navbar-collapse d-flex justify-content-center" id="collapsibleNavbar">
             <ul class="navbar-nav mx-4">
-              <li class="nav-item mx-1 ">
+              <li class="nav-item mx-1 {{ $page == "beranda" ? "active" : "" }}">
                 <a class="nav-link nav-clr" href="/">Beranda</a>
               </li>
-              <li class="nav-item mx-1 ">
-                <a class="nav-link nav-clr" href="#">Tryout</a>
+              <li class="nav-item mx-1 {{ $page == "tryout" ? "active" : "" }}">
+                <a class="nav-link nav-clr" href="/dashboard/tryout">Tryout</a>
               </li>
-              <li class="nav-item mx-1 ">
+              <li class="nav-item mx-1 {{ $page == "materi" ? "active" : "" }}">
                 <a class="nav-link nav-clr" href="#">Materi</a>
               </li>
-              <li class="nav-item mx-1 ">
+              <li class="nav-item mx-1 {{ $page == "kalender" ? "active" : "" }}">
                 <a class="nav-link nav-clr" href="#">Kalender</a>
               </li>
-              <li class="nav-item mx-1 ">
+              <li class="nav-item mx-1 {{ $page == "bank_soal" ? "active" : "" }}">
                 <a class="nav-link nav-clr" href="#">Bank Soal</a>
               </li>
             </ul>

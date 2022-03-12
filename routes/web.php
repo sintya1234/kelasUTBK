@@ -92,7 +92,8 @@ Route::get('/profile', function () {
     return view('/profile.show');
 });
 Route::get('/', function () {
-    return view('/home');
+    $page = "beranda";
+    return view('/home', compact('page'));
 });
 Route::get('/vidio', function () {
     return view('/dashboard/vidio');
