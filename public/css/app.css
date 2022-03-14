@@ -32,13 +32,23 @@ body {
     border-radius: 30px;
 }
 
-.prof-img{
+.prof-img {
     border-radius: 50%;
 }
 /* FOOTER */
 
+/* Bootstrap custom */
 .active {
     font-style: italic !important;
-    font-weight: 900 !important;
+    font-weight: bold !important;
+    color: black !important;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.nav-link:hover {
+    font-style: italic !important;
     color: black !important;
 }
