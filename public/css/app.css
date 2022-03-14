@@ -1,16 +1,16 @@
-body{
-    font-family: 'Thasadith', sans-serif;
+body {
+    font-family: "Thasadith", sans-serif;
 }
 /* NAVBAR */
-.bg-navbar{
-    background-color: #FFBB46;
+.bg-navbar {
+    background-color: #ffbb46;
 }
-.nav-clr{
+.nav-clr {
     color: #000000 !important;
     font-size: larger;
     font-weight: 20;
 }
-.nav-clr:hover{
+.nav-clr:hover {
     font-weight: bold;
     font-size: larger;
 }
@@ -32,7 +32,23 @@ body{
     border-radius: 30px;
 }
 
-.prof-img{
+.prof-img {
     border-radius: 50%;
 }
 /* FOOTER */
+
+/* Bootstrap custom */
+.active {
+    font-style: italic !important;
+    font-weight: bold !important;
+    color: black !important;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.nav-link:hover {
+    font-style: italic !important;
+    color: black !important;
+}

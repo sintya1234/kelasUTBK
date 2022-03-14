@@ -14,9 +14,9 @@
         </div>
         <div class="border border-3 border-warning my-4 w-75 px-5 py-4 rounded-corners">
             @for ($i = 0; $i < 10; $i++)
-                <div class="my-1 row">
+                <div class="my-2 row">
                     <div class="col d-flex">
-                        <h2 class="h5">Try Out {{ $i + 1 }}</h2>
+                        <h2 class="h5 fw-bold">Try Out {{ $i + 1 }}</h2>
                         <p class="ms-3">120 menit</p>
                     </div>
                     <div class="col d-flex justify-content-end">
