@@ -4,6 +4,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\materiController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\tryoutController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -93,7 +94,8 @@ Route::get('/profile', function () {
 });
 Route::get('/', function () {
     $page = "beranda";
-    return view('/home', compact('page'));
+    $user = Auth::user();
+    return view('/home', compact('page', 'user'));
 });
 Route::get('/vidio', function () {
     return view('/dashboard/vidio');

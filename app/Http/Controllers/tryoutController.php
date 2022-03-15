@@ -14,7 +14,8 @@ class tryoutController extends Controller
     public function index() {
         $tryouts = penghubung_user_tryouts::where('users_id', Auth::user()->id)->get();
         $page = "tryout";
-        return view('/dashboard/tryout/index', compact('tryouts', 'page'));
+        $user = Auth::user();
+        return view('/dashboard/tryout/index', compact('tryouts', 'page', 'user'));
     }
 
     public function tryout($id) {

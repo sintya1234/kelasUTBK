@@ -10,6 +10,15 @@ body {
     font-size: larger;
     font-weight: 20;
 }
+
+.menu-icon {
+    font-size: 30px;
+}
+
+.icon {
+    font-size: 25px;
+}
+
 .nav-clr:hover {
     font-weight: bold;
     font-size: larger;
