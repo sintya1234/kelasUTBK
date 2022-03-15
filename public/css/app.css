@@ -1,6 +1,59 @@
 body {
     font-family: "Thasadith", sans-serif;
 }
+
+/* Auth */
+.bg-auth{
+    background-color: #ffbb46;
+    /* background-image: url("/image/profpic.png"); */
+}
+
+.shadow-box{
+    box-shadow: 0 4px 8px 0 rgba(#FFFFFF 0.2), 0 6px 20px 0 rgba(#FFFFFF 0.2);
+}
+
+.main-glassmorph{
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+}
+
+.btn-auth{
+    background-image: linear-gradient(to bottom, #ffbb46, #ffa100);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-auth:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-image: linear-gradient(to bottom, #ffbb46, #ee8f00);
+    color: white;
+}
+
+.auth-change{
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-change:hover{
+    color: #ee8f00;
+    transition: 0.3s;
+}
+
+.input-border{
+    border-radius: 12px;
+}
+
+.auth-title{
+    text-shadow: 0px 2px 8px #FFFFFF;
+}
+
 /* NAVBAR */
 .bg-navbar {
     background-color: #ffbb46;
@@ -44,6 +97,11 @@ body {
 .prof-img {
     border-radius: 50%;
 }
+
+.nav-logo-text:hover{
+    color: #000000;
+}
+
 /* FOOTER */
 
 /* Bootstrap custom */

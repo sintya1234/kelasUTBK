@@ -13,11 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     {{-- <link rel="stylesheet" href="{{mix('css/app.css')}}"> --}}
 
-    <link rel="stylesheet" href="/css/app.css"><title></title> 
+    <link rel="stylesheet" href="/css/app.css">
+    <title></title>
     <title>@yield('title')</title>
 </head>
-<body class="bg-warning auth-bg-size d-flex justify-content-center align-items-center">
-    <div class="row w-50">
+<body class= "bg-auth auth-bg-size d-flex justify-content-center align-items-center">
+    <div class="row w-50 mt-5">
         @if (session()->has('success'))
             <div class="alert alert-success alert-dismissible fade show position-absolute w-50" role="alert">
                 {{ session('success') }}
@@ -25,15 +26,15 @@
             </div>
         @endif
         <div class="col">
-            <div class="d-flex justify-content-center me-4">
+            <div class="d-flex justify-content-center me-4 ">
                 <img src="/image/logo.png" width="60" height="60">
-                <h1 class="mt-2">Online Class</h1>
+                <h1 class="mt-2 auth-title">Online Class</h1>
             </div>
-            <div class="bg-white rounded-lg my-4 p-5 rounded-corners">
+            <div class="main-glassmorph rounded-lg my-4 p-5 rounded-corners">
                 @yield('content')
             </div>
         </div>
-    </div> 
-    
+    </div>
+
 </body>
 </html>
