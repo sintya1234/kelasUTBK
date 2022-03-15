@@ -36,7 +36,7 @@
 
 <nav class="navbar navbar-expand-sm bg-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand d-flex mx-2" href="/">
+    <a class="navbar-brand d-flex mx-2 nav-logo-txt" href="/">
       <img src="/image/logo.png" width="30" height="30">
       Online Class
     </a>
