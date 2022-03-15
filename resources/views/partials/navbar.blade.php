@@ -41,7 +41,7 @@
       Online Class
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
+      <i class="bi bi-list menu-icon"></i>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav align-items-center">
@@ -65,8 +65,18 @@
             <img src="/image/profpic.png" width="35" height="35" class="prof-img">
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Setting</a></li>
-            <li><a class="dropdown-item" href="#">Log out</a></li>
+            @if ($user != null)
+              <li><a class="dropdown-item" href="#">Setting</a></li>
+              <li>
+                <form action="/logout" method="POST">
+                  @csrf
+                  <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+              </li>
+            @else
+              <li><a class="dropdown-item" href="/login">Login</a></li>
+            @endif
+            
           </ul>
         </li>
       </ul>

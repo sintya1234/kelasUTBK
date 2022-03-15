@@ -1,20 +1,26 @@
 @extends('layouts.main')
 @section('container')
-    <div class="row justify-content-center text-center">
+    <div class="row justify-content-center text-center align-items-center">
         <h1 class="h1 mt-4">Latih kemampuanmu yuk!</h1>
         <div class="col-4 mt-4">
-            <button class="btn btn-warning w-75">
-                Cek hasil try outmu disini
+            <button class="btn btn-warning w-75 rounded-corners">
+                <div class="d-flex justify-content-center align-items-center">
+                    Cek hasil tryout mu disini 
+                    <i class="bi bi-book icon ms-2"></i>
+                </div> 
             </button>
         </div>
         <div class="col-4 mt-4">
-            <button class="btn btn-warning w-75">
-                Pelajari materinya disini
+            <button class="btn btn-warning w-75 rounded-corners">
+                <div class="d-flex justify-content-center align-items-center">
+                    Pelajari materinya disini 
+                    <i class="bi bi-book icon ms-2"></i>
+                </div> 
             </button>
         </div>
         <div class="border border-3 border-warning my-4 w-75 px-5 py-4 rounded-corners">
             @for ($i = 0; $i < 10; $i++)
-                <div class="my-2 row">
+                <div class="my-4 row align-items-center">
                     <div class="col d-flex">
                         <h2 class="h5 fw-bold">Try Out {{ $i + 1 }}</h2>
                         <p class="ms-3">120 menit</p>
