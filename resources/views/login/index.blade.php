@@ -10,10 +10,10 @@
 
     <div>
         <h2 class="text-center">Selamat Datang Kembali</h2>
-        <form action="/login" method="post" class="mt-4">
+        <form action="/login" method="post" class="mt-4 text-center">
             @csrf
             <div class="form-floating">
-                <input type="email" name="email" class="form-control @error('name') is-invalid @enderror" id="email"
+                <input type="email" name="email" class="form-control input-border ps-3 @error('name') is-invalid @enderror" id="email"
                     placeholder="name@example.com" autofocus required value="{{ old('email') }}">
                 <label for="email">Email address</label>
                 @error('email')
@@ -25,7 +25,7 @@
             </div>
             <br>
             <div class="form-floating">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                <input type="password" class="form-control input-border ps-3" id="password" name="password" placeholder="Password"
                     required>
                 @error('password')
                     <div class="invalid-feedback">
@@ -38,7 +38,7 @@
             <br>
             <br>
 
-            <button class="w-100 btn btn-outline-dark" type="submit">Login</button>
+            <button class="w-50 btn btn-auth" type="submit">Login</button>
             {{-- <div class="col-sm-6">
                 <button type="button" class="btn btn-block btn-sm btn-twitter">
                     <i class="fa fa-google mr-2"></i>
@@ -46,6 +46,6 @@
                 </button>
             </div> --}}
         </form>
-        <small class="d-block text-center mt-3">Belum daftar? <a href="/register">Register Now!</a></small>
+        <small class="d-block text-center mt-4">Belum punya akun? <a href="/register" class="auth-change">Daftar sekarang yuk!</a></small>
     </div>
 @endsection
