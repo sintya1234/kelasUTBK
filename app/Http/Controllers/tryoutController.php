@@ -19,7 +19,12 @@ class tryoutController extends Controller
     }
 
     public function tryout($id) {
-        
         return view('dashboard.tryout.tryout');
+    }
+
+    public function hasilTryout(){
+        $page = "tryout";
+        $user = Auth::user();
+        return view('dashboard.tryout.hasilTryout', compact('page', 'user'));
     }
 }
