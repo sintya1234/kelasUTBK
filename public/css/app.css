@@ -22,7 +22,7 @@ body {
 
 .btn-auth{
     background-image: linear-gradient(to bottom, #ffbb46, #ffa100);
-    color: white;
+    color: black;
     font-weight: bold;
     border-radius: 20px !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -32,7 +32,7 @@ body {
     transform: scale(1.1);
     transition: 0.3s;
     background-image: linear-gradient(to bottom, #ffbb46, #ee8f00);
-    color: white;
+    color: black;
 }
 
 .auth-change{
@@ -118,4 +118,22 @@ body {
 .nav-link:hover {
     font-style: italic !important;
     color: black !important;
+}
+
+/* Auth */
+.glass-area{
+    background: rgba( 255, 187, 70, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.small-area{
+    background-image: linear-gradient(to bottom, #ffbb46, #ee8f00);
+    color: black;
+    font-weight: bold;
+    border-radius: 20px !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 2px 12px 0 rgba(0, 0, 0, 0.15);
 }
